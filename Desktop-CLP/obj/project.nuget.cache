@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "+LmyckpNGDA=",
+  "dgSpecHash": "olll6v5Dj4E=",
   "success": true,
   "projectFilePath": "C:\\Users\\Iatecam\\Desktop\\Guithub\\Protocolo-Desktop_CLP\\Desktop-CLP\\Desktop-CLP.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Iatecam\\.nuget\\packages\\mcprotocol\\1.2.5\\mcprotocol.1.2.5.nupkg.sha512"
+  ],
   "logs": []
 }

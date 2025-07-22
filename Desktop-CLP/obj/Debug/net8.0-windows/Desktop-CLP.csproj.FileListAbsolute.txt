@@ -1,0 +1,17 @@
+C:\Users\Iatecam\Desktop\Guithub\Protocolo-Desktop_CLP\Desktop-CLP\bin\Debug\net8.0-windows\Desktop-CLP.exe
+C:\Users\Iatecam\Desktop\Guithub\Protocolo-Desktop_CLP\Desktop-CLP\bin\Debug\net8.0-windows\Desktop-CLP.deps.json
+C:\Users\Iatecam\Desktop\Guithub\Protocolo-Desktop_CLP\Desktop-CLP\bin\Debug\net8.0-windows\Desktop-CLP.runtimeconfig.json
+C:\Users\Iatecam\Desktop\Guithub\Protocolo-Desktop_CLP\Desktop-CLP\bin\Debug\net8.0-windows\Desktop-CLP.dll
+C:\Users\Iatecam\Desktop\Guithub\Protocolo-Desktop_CLP\Desktop-CLP\bin\Debug\net8.0-windows\Desktop-CLP.pdb
+C:\Users\Iatecam\Desktop\Guithub\Protocolo-Desktop_CLP\Desktop-CLP\obj\Debug\net8.0-windows\Desktop_CLP.Form1.resources
+C:\Users\Iatecam\Desktop\Guithub\Protocolo-Desktop_CLP\Desktop-CLP\obj\Debug\net8.0-windows\Desktop-CLP.csproj.GenerateResource.cache
+C:\Users\Iatecam\Desktop\Guithub\Protocolo-Desktop_CLP\Desktop-CLP\obj\Debug\net8.0-windows\Desktop-CLP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Iatecam\Desktop\Guithub\Protocolo-Desktop_CLP\Desktop-CLP\obj\Debug\net8.0-windows\Desktop-CLP.AssemblyInfoInputs.cache
+C:\Users\Iatecam\Desktop\Guithub\Protocolo-Desktop_CLP\Desktop-CLP\obj\Debug\net8.0-windows\Desktop-CLP.AssemblyInfo.cs
+C:\Users\Iatecam\Desktop\Guithub\Protocolo-Desktop_CLP\Desktop-CLP\obj\Debug\net8.0-windows\Desktop-CLP.csproj.CoreCompileInputs.cache
+C:\Users\Iatecam\Desktop\Guithub\Protocolo-Desktop_CLP\Desktop-CLP\obj\Debug\net8.0-windows\Desktop-CLP.sourcelink.json
+C:\Users\Iatecam\Desktop\Guithub\Protocolo-Desktop_CLP\Desktop-CLP\obj\Debug\net8.0-windows\Desktop-CLP.dll
+C:\Users\Iatecam\Desktop\Guithub\Protocolo-Desktop_CLP\Desktop-CLP\obj\Debug\net8.0-windows\refint\Desktop-CLP.dll
+C:\Users\Iatecam\Desktop\Guithub\Protocolo-Desktop_CLP\Desktop-CLP\obj\Debug\net8.0-windows\Desktop-CLP.pdb
+C:\Users\Iatecam\Desktop\Guithub\Protocolo-Desktop_CLP\Desktop-CLP\obj\Debug\net8.0-windows\Desktop-CLP.genruntimeconfig.cache
+C:\Users\Iatecam\Desktop\Guithub\Protocolo-Desktop_CLP\Desktop-CLP\obj\Debug\net8.0-windows\ref\Desktop-CLP.dll

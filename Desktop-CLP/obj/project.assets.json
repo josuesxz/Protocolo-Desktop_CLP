@@ -1,11 +1,36 @@
 {
   "version": 3,
   "targets": {
-    "net8.0-windows7.0": {}
+    "net8.0-windows7.0": {
+      "McProtocol/1.2.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/McProtocol.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/McProtocol.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "McProtocol/1.2.5": {
+      "sha512": "Z7whZdh4B5piJ/Vo6pWyAuIPgbU6Jcy0BtSsVg+igQpENurpQwkFkWySo1OBUkvYw2F/gymPdopy3cY2rxHxaw==",
+      "type": "package",
+      "path": "mcprotocol/1.2.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/McProtocol.dll",
+        "mcprotocol.1.2.5.nupkg.sha512",
+        "mcprotocol.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0-windows7.0": []
+    "net8.0-windows7.0": [
+      "McProtocol >= 1.2.5"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Iatecam\\.nuget\\packages\\": {},
@@ -56,6 +81,12 @@
     "frameworks": {
       "net8.0-windows7.0": {
         "targetAlias": "net8.0-windows",
+        "dependencies": {
+          "McProtocol": {
+            "target": "Package",
+            "version": "[1.2.5, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

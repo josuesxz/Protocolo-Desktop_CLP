@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Desktop-CLP/1.0.0": {
+        "runtime": {
+          "Desktop-CLP.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Desktop-CLP/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
