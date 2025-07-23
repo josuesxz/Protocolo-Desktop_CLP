@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Desktop-CLP")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c81f7f1aa1935f6babacefe4a583b51810b3bd7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e2d79a8d77c3a3c0ccd5d6b8db35e39e40001a72")]
 [assembly: System.Reflection.AssemblyProductAttribute("Desktop-CLP")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Desktop-CLP")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
