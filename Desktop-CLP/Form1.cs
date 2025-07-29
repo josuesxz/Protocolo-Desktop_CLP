@@ -4,21 +4,32 @@ namespace Desktop_CLP
 {
     public partial class Form1 : Form
     {
-        public PLCData<int> solicitaDesktop = new PLCData<int>(Mitsubishi.PlcDeviceType.W, 0, 1);
-        public PLCData<int> solicitaTransferidor = new PLCData<int>(Mitsubishi.PlcDeviceType.W, 102, 1);
-        public PLCData<bool> led = new PLCData<bool>(Mitsubishi.PlcDeviceType.Y, 7, 10);
+        public PLCData<int> solicitaDesktop = new (Mitsubishi.PlcDeviceType.W, 0, 1);
+        public PLCData<int> solicitaTransferidor = new (Mitsubishi.PlcDeviceType.W, 258, 1);
+        public PLCData<bool> led = new (Mitsubishi.PlcDeviceType.Y, 7, 10);
+        public PLCData<short> quantidadeEstantes = new (Mitsubishi.PlcDeviceType.W, 16, 10);
+        public PLCData<short> modoMaquina = new(Mitsubishi.PlcDeviceType.D, 0, 1);
+        public PLCData<bool> controleModo = new (Mitsubishi.PlcDeviceType.M, 13, 4);
 
         public Form1()
         {
-            InitializeComponent(); 
+            InitializeComponent();
         }
 
         private async Task MonitorarPLC()
         {
             while (PLCData.PLC != null && PLCData.PLC.Connected)
             {
+                await quantidadeEstantes.ReadData();
+                await modoMaquina.ReadData();
+                lb_stts_connect.Text = "Conectado - " + modoMaquina[0];
+                lb_QTD_mgzn1.Text = "Quantidade: " + quantidadeEstantes[0].ToString();
+                lb_QTD_mgzn2.Text = "Quantidade: " + quantidadeEstantes[1].ToString();
+                await Task.Delay(500);
+
                 try
                 {
+
                     await led.ReadData();
                     if (led[0] == true)
                     {
@@ -40,14 +51,10 @@ namespace Desktop_CLP
             }
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
 
         // Variáveis para o pulso
 
-        public async void pulsoSinal(int indice)
+        public async void pulsoSinalDSKTP(int indice)
         {
             int[] valorEstante = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512];
             int valorFinal = 0;
@@ -60,15 +67,22 @@ namespace Desktop_CLP
             await solicitaDesktop.WriteData();
         }
 
+        public async void pulsoSinalTRNSF(int indice)
+        {
+            int[] valorEstante = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512];
+
+            solicitaTransferidor[0] = valorEstante[indice]; ;
+            await solicitaTransferidor.WriteData();
+            await Task.Delay(500);
+            solicitaTransferidor[0] = 0;
+            await solicitaTransferidor.WriteData();
+        }
+
         private async void btn_est_1_Click(object sender, EventArgs e)
         {
-            pulsoSinal(0);
+            pulsoSinalDSKTP(0);
         }
 
-        private void groupBox1_Enter_1(object sender, EventArgs e)
-        {
-
-        }
 
         private async void btn_connect_Click(object sender, EventArgs e)
         {
@@ -82,18 +96,53 @@ namespace Desktop_CLP
             }
         }
 
-        private void btn_sol_transf_Click(object sender, EventArgs e)
+        private async void btn_sol_transf_Click(object sender, EventArgs e)
         {
-
+            pulsoSinalTRNSF(0);
         }
 
         private async void btn_est_2_Click(object sender, EventArgs e)
         {
-            pulsoSinal(1);
+            pulsoSinalDSKTP(1);
         }
 
-        private void led_est_1_Click(object sender, EventArgs e)
-        {  
+        private void btn_sol_transf2_Click(object sender, EventArgs e)
+        {
+            pulsoSinalTRNSF(1);
+        }
+
+        private async void ch_man_auto_CheckedChanged(object sender, EventArgs e)
+        {
+            await controleModo.ReadData();
+            controleModo[0] = !controleModo[0];
+            await controleModo.WriteData();
+        }
+
+        private async void btn_rst_Click(object sender, EventArgs e)
+        {
+            controleModo[1] = true;
+            await controleModo.WriteData();
+            await Task.Delay(500);
+            controleModo[1] = false;
+            await controleModo.WriteData();
+        }
+
+        private async void btn_start_Click(object sender, EventArgs e)
+        {
+            controleModo[2] = true;
+            await controleModo.WriteData();
+            await Task.Delay(500);
+            controleModo[2] = false;
+            await controleModo.WriteData();
+        }
+
+        private async void btn_stp_Click(object sender, EventArgs e)
+        {
+            controleModo[3] = true;
+            await controleModo.WriteData();
+            await Task.Delay(500);
+            controleModo[3] = false;
+            await controleModo.WriteData();
         }
     }
 
